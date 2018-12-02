@@ -16,11 +16,15 @@ class InviteCommand extends commando.Command
     {
         let embed = new Discord.RichEmbed()
         .setTitle("Invite")
-        .setDescription("__**" + "Link: https://discordapp.com/oauth2/authorize?client_id=495593444513677320&scope=bot&permissions=2146958847" +"**__")
-        .addField("DBL Vote Link: ", `https://discordbots.org/bot/${bot.id}`)
+        .setDescription("" + "Link: https://discordapp.com/oauth2/authorize?client_id=495593444513677320&scope=bot&permissions=2146958847" +"")
+        .addField("DBL Vote Link: ", "https://discordbots.org/bot/473231079755612160")
         .setTimestamp();
-
-
+        let dm = message.author.id;
+        try {
+            dm.sent(embed);
+        }catch(e) {
+            message.channel.send("Your DMs were locked, so here is the message I am was going to send you. " + embed)
+        }
     }
 }
 
