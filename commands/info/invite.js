@@ -25,15 +25,3 @@ class InviteCommand extends commando.Command
 }
 
 module.exports = InviteCommand;
-
-
-
-
-
-
-
-
-
-
-
-//https://discordapp.com/oauth2/authorize?client_id=495593444513677320&scope=bot&permissions=2146958847
