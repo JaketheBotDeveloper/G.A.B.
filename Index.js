@@ -4,6 +4,7 @@ const bot = new Commando.Client({
     owner: '344217669450596363'
 });
 //Need to add Jake soon.
+//Need to add a || to add Jake
 bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('admin', 'Admin');
