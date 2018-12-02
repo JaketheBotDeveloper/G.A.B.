@@ -20,7 +20,7 @@ class BanCommand extends commando.Command
           const member = message.guild.member(user);
           if (member) {
             member.ban({
-              reason: 'They were bad!',
+              reason: (args),
             }).then(() => {
               message.reply(`Successfully banned ${user.tag}`);
             }).catch(err => {
