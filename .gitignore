@@ -3,3 +3,4 @@ node_modules/
 README.md
 Keep/
 ffmpeg/
+package-lock.json
