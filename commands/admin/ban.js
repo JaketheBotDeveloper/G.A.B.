@@ -18,7 +18,26 @@ class BanCommand extends commando.Command
 
         if (message.content.startsWith('!ban')) {
           const user = message.mentions.users.first();
+          const dm = message.author.id;
           if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("You Don't have permision!");
+          if(user.hasPermision("BAN_MEMBERS") || user.hasPermision("KICK_MEMBERS") || user.hasPermision("ADMINISTRATOR") {
+
+            let newembed = new Discord.RichEmbed()
+            .setTitle("Error")
+            .setDescription("The User Has either BAN_MEMBERS, KICK_MEMBERS or ADMINISTRATOR permisions")
+            .setTimestamp();
+
+            try{
+              dm.send(newembed);
+            }catch(e) {
+              message.channel.send("Your DM's was locked so here is the message. " + newembed)
+            }
+
+
+          }
+
+
+
           if (user) {
             const member = message.guild.member(user);
             if (member) {
