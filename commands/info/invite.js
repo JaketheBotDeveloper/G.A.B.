@@ -19,11 +19,11 @@ class InviteCommand extends commando.Command
         .setDescription("Invite Link:" + "Link: https://discordapp.com/oauth2/authorize?client_id=495593444513677320&scope=bot&permissions=2146958847")
         .addField("DBL Link: ", "https://discordbots.org/bot/473231079755612160")
         .setTimestamp();
-        let dm = message.author.id;
+        let dm = message.author;
         try {
             dm.sent(embed);
         }catch(e) {
-            message.channel.send("Your DMs were locked, so here is the message I am was going to send you. " + embed)
+            message.channel.send(embed)
         }
     }
 }
