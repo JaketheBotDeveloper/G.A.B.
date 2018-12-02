@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/JaketheBotDeveloper/G.A.B./issues"
   },
-  "homepage": "https://github.com/JaketheBotDeveloper/G.A.B.#readme"
+  "homepage": "https://github.com/JaketheBotDeveloper/G.A.B.#readme",
+  "dependencies": {
+    "discord.js-commando": "^0.10.0",
+    "ytdl-core": "^0.28.0"
+  }
 }
