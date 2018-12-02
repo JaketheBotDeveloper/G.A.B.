@@ -31,11 +31,8 @@ bot.on("ready", async () => {
   }, 1 * 1000);
   });
 
-if(err) {
-  console.log(err);
-  throw err;
-};
 
 
 
+bot.on('error', error => { console.error(error)});
 bot.login(process.env.token);
