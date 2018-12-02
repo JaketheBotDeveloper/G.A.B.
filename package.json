@@ -1,0 +1,19 @@
+{
+  "name": "g.a.b",
+  "version": "1.0.0",
+  "description": "a Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaketheBotDeveloper/G.A.B..git"
+  },
+  "author": "Jake18122003#5483 and eazoppe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JaketheBotDeveloper/G.A.B./issues"
+  },
+  "homepage": "https://github.com/JaketheBotDeveloper/G.A.B.#readme"
+}
