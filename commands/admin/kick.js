@@ -1,5 +1,5 @@
 const commando = require('discord.js-commando');
-
+const Discord = require("discord.js")
 class KickCommand extends commando.Command
 {
     constructor(client)
@@ -14,10 +14,12 @@ class KickCommand extends commando.Command
 
     async run(message, args)
     {
+
             if (!message.guild) return;
-          
+
             if (message.content.startsWith('!kick')) {
               const user = message.mentions.users.first();
+                if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("I'm sorry you don't have permision.");
               if (user) {
                 const member = message.guild.member(user);
                 if (member) {

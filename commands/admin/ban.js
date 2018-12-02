@@ -1,5 +1,5 @@
 const commando = require('discord.js-commando');
-
+const Discord = require("discord.js");
 class BanCommand extends commando.Command
 {
     constructor(client)
@@ -18,6 +18,7 @@ class BanCommand extends commando.Command
 
         if (message.content.startsWith('!ban')) {
           const user = message.mentions.users.first();
+          if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("You Don't have permision!");
           if (user) {
             const member = message.guild.member(user);
             if (member) {
@@ -37,7 +38,7 @@ class BanCommand extends commando.Command
           }
         }
       };
-      
+
     }
 
 
