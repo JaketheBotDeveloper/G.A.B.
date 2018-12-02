@@ -22,9 +22,9 @@ class BanCommand extends commando.Command
           if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("You Don't have permision!");
           let newembed = new Discord.RichEmbed()
           .setTitle("Error")
-          .setDescription("The User Has either BAN_MEMBERS, KICK_MEMBERS or ADMINISTRATOR permisions")
+          .setDescription("The User Has ADMINISTRATOR permisions")
           .setTimestamp();
-          if(user.hasPermision("BAN_MEMBERS") || user.hasPermision("KICK_MEMBERS") || user.hasPermision("ADMINISTRATOR") return message.send(newembed);
+          if(user.hasPermision("ADMINISTRATOR") return message.send(newembed);
 
 
           if (user) {
