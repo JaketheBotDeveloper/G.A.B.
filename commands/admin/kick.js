@@ -41,7 +41,7 @@ class KickCommand extends commando.Command
 
       let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
       if(!kUser) return message.channel.send("Can't find that user!")
-      let kReason = args.join(" ").slice(22);
+      let kReason = args.slice(1).join(" ")
       if(!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send(nopermision);
       if(kUser.hasPermision("KICK_MEMBERS") || kUser.hasPermision("BAN_MEMBERS")) return message.channel.send(Userhaspermision);
     let messageuser = message.author.tag;

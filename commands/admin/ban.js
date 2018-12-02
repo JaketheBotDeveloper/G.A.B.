@@ -47,7 +47,7 @@ class BanCommand extends commando.Command
 
         let bUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         if(!bUser) return message.channel.send(usernotfound);
-        let bReason = args.join(" ").slice(22);
+        let bReason = args.slice(1).join(" ")
         if(!bReason) return message.channel.send();
         if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send(nopermision);
         if(bUser.hasPermision("KICK_MEMBERS") || bUser.hasPermision("BAN_MEMBERS")) return message.channel.send(cantbebanned);
