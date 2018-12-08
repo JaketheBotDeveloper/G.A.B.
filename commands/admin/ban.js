@@ -17,7 +17,6 @@ class BanCommand extends commando.Command
     
       if (message.content.startsWith('!ban')) {
         if (user) {
-        if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("You dont have permision");
           const member = message.guild.member(user);
           if (member) {
             member.ban({
