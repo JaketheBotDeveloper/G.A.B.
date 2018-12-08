@@ -17,7 +17,7 @@ class BanCommand extends commando.Command
   if (message.content.startsWith('!ban')) {
     const user = message.mentions.users.first();
     if (user) {
-      if (!message.member.hasPermission("BAN_MEMBERS"));
+      {if (!message.member.hasPermission("BAN_MEMBERS"));
       const member = message.guild.member(user);
       if (member) {
         member.ban({
@@ -31,9 +31,15 @@ class BanCommand extends commando.Command
       } else {
         message.reply('That user isn\'t in this guild!');
       }
+    }}
+    else 
+    {
+      message.reply("You don't have that permission");
+    }
     } else {
       message.reply('You didn\'t mention the user to ban or you dont have permission');
     }
   }
-}};
+};
+
 module.exports = BanCommand;
