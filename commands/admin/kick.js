@@ -30,7 +30,6 @@ class KickCommand extends commando.Command
                     let embed = new Discord.RichEmbed()
                     .setTitle("Kicked")
                     .setDescription(`Successfully kicked ${user.tag}`)
-                    .addField('Reason: ' (args))
                     .setColor(0xad9434);
                   }).catch(err => {
                     message.reply('I was unable to kick the member');
@@ -45,5 +44,5 @@ class KickCommand extends commando.Command
             }
           });
     }
-  }
+};
 module.exports = KickCommand;
