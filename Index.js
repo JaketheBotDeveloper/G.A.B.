@@ -14,12 +14,10 @@ bot.registry.registerGroup('info', 'Info');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + '/commands');
 
-bot.on('guildMemberAdd', member => {
-    const channel = member.guild.channels.find(ch => ch.name === 'member-log');
-    if (!channel) return;
-    channel.send(`Welcome to the server, ${member}`);
-  });
-
+bot.on("guildMemberAdd", function(member)
+{
+    member.send(`Welcome to the server, ${member}`)
+});
 global.currentTeamMembers = [];
 global.servers = {};
 
