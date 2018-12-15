@@ -31,6 +31,11 @@ class KickCommand extends commando.Command
                     .setTitle("Kicked")
                     .setDescription(`Successfully kicked ${user.tag}`)
                     .setColor(0xad9434);
+                    try {
+                        dm.sent(embed);
+                    }catch(e) {
+                        message.channel.send(embed)
+                    }
                   }).catch(err => {
                     message.reply('I was unable to kick the member');
                     console.error(err);

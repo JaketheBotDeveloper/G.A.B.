@@ -30,6 +30,11 @@ class BanCommand extends commando.Command
           .setTitle("Banned")
           .setDescription(`Successfully Banned ${user.tag}`)
           .setColor(0xff0000);
+          try {
+            dm.sent(embed);
+        }catch(e) {
+            message.channel.send(embed)
+        }
         }).catch(err => {
           message.reply('I was unable to ban the member');
           console.error(err);
