@@ -14,7 +14,7 @@ class BanCommand extends commando.Command
   hasPermission(msg) {
 		if(!msg.guild) return this.client.isOwner(msg.author);
 		return msg.member.hasPermission('BAN_MEMBERS') || this.client.isOwner(msg.author);
-	}
+  } 
 
   async run(message, args)
   {if (!message.guild) return;
@@ -24,7 +24,7 @@ class BanCommand extends commando.Command
       const member = message.guild.member(user);
       if (member) {
         member.ban({
-          reason: 'They were bad!',
+          reason: {args},
         }).then(() => {
           message.reply(`Successfully banned ${user.tag}`);
         }).catch(err => {
