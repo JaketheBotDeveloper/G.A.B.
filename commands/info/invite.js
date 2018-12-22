@@ -18,7 +18,8 @@ class InviteCommand extends commando.Command
         .setTitle("Invite")
         .setDescription("Invite Link:" + "Link: https://discordapp.com/oauth2/authorize?client_id=473231079755612160&scope=bot&permissions=2146958847")
         .addField("DBL Link: ", "https://discordbots.org/bot/473231079755612160")
-        .addFooter("G.A.B. Support Server: https://discord.gg/CaX7gX8")
+        .setFooter("G.A.B. Support Server: https://discord.gg/CaX7gX8")
+        .setThumbnail('https://cdn.discordapp.com/attachments/518557138281562135/525843370636083220/GAB.png')
         .setTimestamp();
         let dm = message.author;
         try {
