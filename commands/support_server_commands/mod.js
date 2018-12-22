@@ -15,12 +15,12 @@ class ModCommand extends commando.Command
     
     async run(message, args)
     {
-        if(guildID = "518272918744989696")
+        if(guild.id = "518272918744989696")
         {
        message.reply("This is coming soon!")
         } else
         {
-            message.reply("This command only works in the Support Server.")
+            message.reply("This command only works in the G.A.B. Support Server.")
         }
     }
 }
