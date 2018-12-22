@@ -26,7 +26,18 @@ class BanCommand extends commando.Command
         member.ban({
           reason: {args},
         }).then(() => {
-          message.reply("They were banned.")
+          let embed = new Discord.RichEmbed()
+          .setTitle("Banned")
+          .setDescription("They have been banned from this server.")
+          .addField("I have Banned " (user))
+          .setColor(0xff0a1b)
+          .setTimestamp();
+          let dm = message.author;
+          try {
+              dm.sent(embed);
+          }catch(e) {
+              message.channel.send(embed)
+          }
         }).catch(err => {
           message.reply('I was unable to ban the member');
           console.error(err);
