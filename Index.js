@@ -1,7 +1,7 @@
 const Commando = require('discord.js-commando');
 
 const bot = new Commando.Client({
-    owner: '344217669450596363'
+    owner: '344217669450596363' + '305755659033509889'
 });
 /*
 Need to add Jake soon.
@@ -11,6 +11,7 @@ bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('admin', 'Admin');
 bot.registry.registerGroup('info', 'Info');
+bot.registry.registerGroup('support_server_commands', 'Support_server_commands');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + '/commands');
 
