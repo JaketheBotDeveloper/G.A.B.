@@ -1,6 +1,4 @@
 const Commando = require('discord.js-commando');
-const hook = new Discord.WebhookClient('520788521322020875', 'v0aeEQGkPP8NxnbNMP45GZie5JAE67czlwX3nhHwyQHh1lLAvXJi4ECQyGc-7zf9Wa93');
-hook.send('I have been rebooted');
 
 const bot = new Commando.Client({
     owner: '344217669450596363 | 305755659033509889'
