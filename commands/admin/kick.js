@@ -27,15 +27,7 @@ class KickCommand extends commando.Command
                 const member = message.guild.member(user);
                 if (member) {
                   member.kick('Optional reason that will display in the audit logs').then(() => {
-                    let embed = new Discord.RichEmbed()
-                    .setTitle("Kicked")
-                    .setDescription(`Successfully kicked ${user.tag}`)
-                    .setColor(0xad9434);
-                    try {
-                        dm.sent(embed);
-                    }catch(e) {
-                        message.channel.send(embed)
-                    }
+                    message.reply("They were kicked.")
                   }).catch(err => {
                     message.reply('I was unable to kick the member');
                     console.error(err);
