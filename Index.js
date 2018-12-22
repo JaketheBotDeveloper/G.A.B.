@@ -11,10 +11,7 @@ bot.registry.registerGroup('simple', 'Simple');
 bot.registry.registerGroup('music', 'Music');
 bot.registry.registerGroup('admin', 'Admin');
 bot.registry.registerGroup('info', 'Info');
-if(guildID = "518272918744989696")
-{
-    bot.registry.registerGroup('support_server_commands', 'Support_Server_commands');
-}
+bot.registry.registerGroup('support_server_commands', 'Support_Server_commands');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + '/commands');
 
